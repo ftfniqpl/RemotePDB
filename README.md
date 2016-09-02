@@ -9,7 +9,7 @@
 ```python
     import rpdb
     ...
-    rpdb.trace_to_remote("192.168.1.1",4444)
+    rpdb.set_remote_trace("192.168.1.1",4444)
 ```
 
 *server*
