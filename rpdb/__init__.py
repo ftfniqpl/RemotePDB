@@ -27,7 +27,7 @@ class Rpdb(pdb.Pdb):
         # self.skt.bind((addr, port))
         # self.skt.listen(1)
           # Writes to stdout are forbidden in mod_wsgi environments
-  
+
         if remoteaddr:
             clientsocket = self.toremote(remoteaddr, port)
             sys.stderr.write("pdb in connect to %s:%d\n" % clientsocket.getsockname())
@@ -110,7 +110,7 @@ def set_trace(addr="127.0.0.1", port=4444):
         traceback.print_exc()
 
 
-def trace_to_remote(remoteaddr, port=4444):
+def set_remote_trace(remoteaddr, port=4444):
 
     try:
         debugger = Rpdb(remoteaddr=remoteaddr, port=port)
